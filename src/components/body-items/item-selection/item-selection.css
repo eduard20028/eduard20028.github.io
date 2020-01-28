@@ -1,0 +1,29 @@
+.item-selection{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding:35px 0;
+}
+.item-selection .title{
+    color: #3f444e;
+}
+.item-selection .selection-menu{
+    font-size: 18px;
+    margin-left:140px;
+}
+.item-selection .selection-menu button{
+    font-style: italic;
+}
+.item-selection .search-panel{
+    position:relative;
+    justify-content: flex-end;
+}
+.item-selection .search-panel input{
+    padding-right: 20px;
+    margin: 0!important;
+}
+.item-selection .search-panel button{
+    position: absolute;
+}

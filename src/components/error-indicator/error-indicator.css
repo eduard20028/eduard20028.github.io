@@ -1,0 +1,15 @@
+.error-indicator{
+    width:100%;
+}
+
+.error-indicator .error{
+    display:Flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.error-indicator .error{
+    background: #E15B64;
+    padding:20px 0;
+}

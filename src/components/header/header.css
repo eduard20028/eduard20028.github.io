@@ -1,0 +1,32 @@
+.header .navbar-brand{
+    margin:15px 0;
+}
+.header .nav-icons{
+    font-size: 20px;
+}
+.header .nav-icons a{
+    font-size: 20px;
+    color: #909296;
+    margin:0 22px;
+    transition: 0.3s;
+}
+.header .nav-icons a:hover{
+    color: #D8232A;
+}
+.header .nav-icons a:nth-child(1){
+    font-size: 17px;
+}
+.navbar {
+    padding: .5rem 0;
+}
+.tooltip{
+    margin-top:15px;
+}
+.tooltip .tooltip-inner{
+    background:#D8232A;
+    font-weight:bold;
+    font-size: 12px;
+}
+.bs-tooltip-bottom .arrow::before {
+    border-bottom-color:#D8232A!important;
+}

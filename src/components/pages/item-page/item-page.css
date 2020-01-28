@@ -1,0 +1,34 @@
+.item-page{
+    background-color: #edeff0;
+    padding: 100px 0;
+}
+.item-page .title-img{
+    max-width:100%;
+}
+.film-poster .poster-img{
+    position: absolute;
+    z-index: 100;
+    transition: 0.3s;
+    width: 250px;
+    height: 375px;
+}
+.film-poster .poster-cont{
+    width: 250px;
+    height: 375px;
+    margin-top: 20px;
+}
+.film-poster{
+    display: flex;
+    flex-direction: column;
+}
+.film-info ul{
+    font-size:20px;
+}
+.film-info ul li{
+    margin-bottom:20px;
+}
+.film-info ul li .field span{
+    margin-right: 5px;
+}
+
+
