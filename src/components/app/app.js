@@ -35,10 +35,6 @@ export default class App extends Component {
                     }}/>
                     <Route path="/upcoming" component={UpcomingItems} exact/>
 
-                    <Route path="/login" render={()=> {
-                        return (<h1>Tested page (Doesn`t work)</h1>)
-                    }} exact/>
-                    
                     <Route path="/tv/:id" render={({match}) => {
                         const {id} = match.params;
                         return <TvPage itemId={id}/>

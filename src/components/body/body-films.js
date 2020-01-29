@@ -108,13 +108,14 @@ export class BodyFilms extends Component{
             this.setNewPage(+nthPage(3).textContent);
             nthPage(3).classList.add('act-ive');
         }
-        else if(e.target === nthPage(6)&&+nthPage(6).textContent !== 200){
+        else if(e.target === pages[pages.length-1]&&+pages[pages.length-1].textContent !== 200){
+            console.log(pages[pages.length-1]);
             for(let i = 0; i < 5; i++){
                     pages[i].innerHTML = +pages[i].innerHTML + 1;
                 }
             rem();
-            this.setNewPage(+nthPage(5).textContent);
-            nthPage(5).classList.add('act-ive');
+            this.setNewPage(+pages[pages.length-2].textContent);
+            pages[pages.length-2].classList.add('act-ive');
         }
         else if(btn === 'cur_b'&&+e.target.textContent !== page){
             rem();
