@@ -1,3 +1,10 @@
 .pagination{
     margin-top: 25px;
 }
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none;
+}
+.btn-outline-danger:focus {
+    box-shadow: none;
+}

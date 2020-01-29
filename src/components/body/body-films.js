@@ -36,27 +36,85 @@ export class BodyFilms extends Component{
 
     setNewPage = (newPage) => {
         this.setState({
-            page: newPage
+            page: newPage,
          }, this.loadItems);
     }
     
     onChangePage = (e) => {
         const {page} = this.state;
         let btn = e.target.id;
-        let classes = document.querySelectorAll(`.pagination #cur_b`);
-        let rem = () => {classes[page-1].classList.remove('act-ive')};
-        if(+e.target.textContent === page){
-            return null;
+        let nthPage = (i) => document.querySelector(`.pagination button:nth-child(${i})`);
+        let pages = document.querySelectorAll(`.pagination #cur_b`);
+
+        let rem = () => {
+            for(let i = 0; i < pages.length; i++){ 
+                if(pages[i].classList.contains('act-ive')){
+                    pages[i].classList.remove('act-ive');
+                }
+            };
         }
+        
         if(btn === 'prev_b'&&page !== 1){
-            rem();
             this.setNewPage(page-1);
-            classes[page-2].classList.add('act-ive');
+
+            for(let i = 0; i < pages.length; i++){ 
+                if(pages[i].classList.contains('act-ive')){
+                    pages[i].classList.remove('act-ive');
+                    pages[i-1].classList.add('act-ive');
+                    break;
+                }
+            };
+
+            for(let i = 0; i < pages.length; i++){ 
+                if(pages[i].classList.contains('act-ive')&&pages[i]===nthPage(2)&&+nthPage(2).textContent !== 1){
+                    for(let i = 0; i < pages.length; i++){
+                        pages[i].innerHTML = +pages[i].innerHTML - 1;
+                        rem();
+                        this.setNewPage(+nthPage(3).textContent);
+                        nthPage(3).classList.add('act-ive');
+                    }
+                }
+            };
+
         }
-        else if(btn === 'next_b'&&page !== 5){
-            rem();
+
+        else if(btn === 'next_b'){
             this.setNewPage(page+1);
-            classes[page].classList.add('act-ive');
+    
+            for(let i = 0; i < pages.length; i++){ 
+                if(pages[i].classList.contains('act-ive')&&nthPage(i+2)!==nthPage(6)){
+                    pages[i].classList.remove('act-ive');
+                    pages[i+1].classList.add('act-ive');
+                    break;
+                }
+            };
+            for(let i = 0; i < pages.length; i++){ 
+                if(pages[i].classList.contains('act-ive')&&pages[i]===nthPage(6)){
+                    for(let i = 0; i < pages.length; i++){
+                        pages[i].innerHTML = +pages[i].innerHTML + 1;
+                        rem();
+                        this.setNewPage(+nthPage(5).textContent);
+                        nthPage(5).classList.add('act-ive');
+                    }
+                }
+            };
+            
+        }
+        else if(e.target === nthPage(2)&&+nthPage(2).textContent !== 1){
+            for(let i = 0; i < 5; i++){
+                pages[i].innerHTML = +pages[i].innerHTML - 1;
+            }
+            rem();
+            this.setNewPage(+nthPage(3).textContent);
+            nthPage(3).classList.add('act-ive');
+        }
+        else if(e.target === nthPage(6)&&+nthPage(6).textContent !== 200){
+            for(let i = 0; i < 5; i++){
+                    pages[i].innerHTML = +pages[i].innerHTML + 1;
+                }
+            rem();
+            this.setNewPage(+nthPage(5).textContent);
+            nthPage(5).classList.add('act-ive');
         }
         else if(btn === 'cur_b'&&+e.target.textContent !== page){
             rem();

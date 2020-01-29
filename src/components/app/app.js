@@ -4,7 +4,7 @@ import {Switch, Route, Redirect} from 'react-router-dom';
 import './app.css'
 import {MoviePage, TvPage, HomePage} from '../pages';
 import MovieService from '../../services';
-import { MovieItems, TvItems, TopRatedItems, UpcomingItems, Upcoming } from '../body-items';
+import { MovieItems, TvItems, TopRatedItems, UpcomingItems } from '../body-items';
 export default class App extends Component {
    
     state = {
@@ -34,6 +34,10 @@ export default class App extends Component {
                         return <UpcomingItems itemId={id}/>
                     }}/>
                     <Route path="/upcoming" component={UpcomingItems} exact/>
+
+                    <Route path="/login" render={()=> {
+                        return (<h1>Tested page (Doesn`t work)</h1>)
+                    }} exact/>
                     
                     <Route path="/tv/:id" render={({match}) => {
                         const {id} = match.params;

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FilmItem from './film-item';
-
+import NotAvl from './sorry-image-not-available.jpg'
 export default class FilmItemContainer extends Component {
 
     state = {
@@ -42,14 +42,13 @@ export default class FilmItemContainer extends Component {
         this.setState({
             item: item,
             id: item.id,
-            image: getItemImage(item),
+            image: getItemImage(item) ? getItemImage(item) : NotAvl,
             likeNum,
         })
     }
     
     render(){
         const {item, image, likeNum, id} = this.state;
-        if(!image) return null;
         return <FilmItem id={id} item={item} image={image} likes={likeNum} onActive={this.onActive}/>
     }
 }

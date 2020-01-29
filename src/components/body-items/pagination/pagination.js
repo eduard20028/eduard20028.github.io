@@ -11,7 +11,7 @@ const Pagination = ({onChangePage, pages}) => {
         }
         return nodeList;
     }
-
+    
     if(pages < 2){ return null}
         return (
             <div className="pagination row justify-content-center">

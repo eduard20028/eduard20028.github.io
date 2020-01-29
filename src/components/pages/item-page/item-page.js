@@ -10,7 +10,7 @@ class ItemPage extends Component {
     state = { 
         item: [],
         image: null,
-        similarItems: null,
+        similarItems: [],
         loading: true
      }
      
@@ -48,8 +48,9 @@ class ItemPage extends Component {
     render() {
         const {loading, item, image, similarItems} = this.state;
         const {getItemImage} = this.props;
-        
+
         if(loading) return <Spinner/>
+
         return (
 
             <div className="item-page">
@@ -75,7 +76,7 @@ class ItemPage extends Component {
                         </div>
                     </div>
 
-                    <h5>Similar Films</h5>
+                    <h5 hidden={!similarItems.length}>Similar Films</h5>
                     <div className="row justify-content-sm-center">
                         {
                             similarItems.map((item) => {
