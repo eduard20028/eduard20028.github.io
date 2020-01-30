@@ -15,7 +15,7 @@ export default class App extends Component {
             <main role="main"> 
                 <Header/>
                 <Switch>
-                    <Route path="/" exact component={HomePage}/>
+                    <Route path="" exact component={HomePage}/>
 
                     <Route path="/movies/:id" render={({match}) => {
                         const {id} = match.params;
