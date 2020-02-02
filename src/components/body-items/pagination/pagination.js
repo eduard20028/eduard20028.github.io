@@ -19,7 +19,7 @@ const Pagination = ({totalPages, setNewPage, currPage}) => {
         else if(currPage + i === i + 1){ page = currPage + i; }
         else if(currPage - 1 === 1){ page = 1 + i; }
         else{ page = currPage - 2 + i; }
-        return <button onClick={()=>{onChangePage("btn", page)}} key={i} className={`btn btn-outline-danger ${page===currPage?"active":'g'}`}>{page}</button>;
+        return <button onClick={()=>{onChangePage("btn", page)}} key={i} className={`btn btn-outline-danger ${page===currPage?"active":' '}`}>{page}</button>;
     }))};
     
     if(totalPages < 2){ return null; }
