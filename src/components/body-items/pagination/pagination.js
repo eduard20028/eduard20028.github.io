@@ -1,26 +1,36 @@
 import React from 'react';
 import './pagination.css';
 
-const Pagination = ({onChangePage, pages}) => {
-   
-    let createPage = (pages) => {
-        let nodeList = [];
-        nodeList.push(React.createElement("button",{id:"cur_b", key:1, onClick:onChangePage, className:"btn btn-outline-danger act-ive"}, 1));
-        for(let i = 2; i < pages+1; i++){
-            nodeList.push(React.createElement("button",{id:"cur_b", key:i, onClick:onChangePage, className:"btn btn-outline-danger"}, i));
-        }
-        return nodeList;
+const Pagination = ({totalPages, setNewPage, currPage}) => {
+    let showPages = 5;
+
+    const onChangePage = (target, page) => {
+        if(currPage === page) return null;
+        if(target === "prev_page"&&currPage-1 > 0){ page = currPage - 1}
+        else if(target === "next_page"&&currPage < totalPages){ page = currPage + 1}
+        else if(target !== "btn") return null;
+        setNewPage(page);
     }
+
+    let createPages = () => {return ([...new Array(showPages)].map((_, i) => {
+        let page;
+        if(1 + i > totalPages) return null;
+        else if(totalPages < 5){ page = 1 + i; }
+        else if(currPage + i === i + 1){ page = currPage + i; }
+        else if(currPage - 1 === 1){ page = 1 + i; }
+        else{ page = currPage - 2 + i; }
+        return <button onClick={()=>{onChangePage("btn", page)}} key={i} className={`btn btn-outline-danger ${page===currPage?"active":'g'}`}>{page}</button>;
+    }))};
     
-    if(pages < 2){ return null}
+    if(totalPages < 2){ return null; }
         return (
             <div className="pagination row justify-content-center">
                 <div className="btn-group btn-group-toggle">
-                    <button id="prev_b" onClick={onChangePage} className="btn btn-outline-danger">&laquo;</button>
+                    <button id="prev_b" onClick={()=>{onChangePage("prev_page")}} className="btn btn-outline-danger">&laquo;</button>
                         {
-                        createPage(pages)
+                            createPages()
                         }
-                    <button id="next_b" onClick={onChangePage} className="btn btn-outline-danger">&raquo;</button>
+                    <button id="next_b" onClick={()=>{onChangePage("next_page")}} className="btn btn-outline-danger">&raquo;</button>
                 </div>
             </div>
         );
