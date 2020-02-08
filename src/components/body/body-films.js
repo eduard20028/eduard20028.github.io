@@ -43,7 +43,6 @@ export class BodyFilms extends Component{
 
     onChangeDesired = (e) => {
         const {getDesired} = this.props;
-
         const term = e.target.value;
         this.setState({term});
         if(!term){this.loadItems(); return null;}

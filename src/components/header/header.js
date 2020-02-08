@@ -21,9 +21,6 @@ const Header = () => {
 
 
                 <div>
-                    <Link to="/login">
-                    LogIn
-                    </Link>
                 </div>
             </nav>
             </div>
