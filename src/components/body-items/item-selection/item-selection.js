@@ -3,7 +3,7 @@ import './item-selection.css';
 
 const ItemSelection = (props) => {
     
-        const win = window.location.pathname;
+        const win = window.location.href;
             let title;
             if(win.includes("/movies")){
                 title = "MOVIES"
