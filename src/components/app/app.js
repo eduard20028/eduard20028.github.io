@@ -3,13 +3,9 @@ import Header from '../header';
 import {Switch, Route, Redirect} from 'react-router-dom';
 import './app.css'
 import {MoviePage, TvPage, HomePage} from '../pages';
-import MovieService from '../../services';
 import { MovieItems, TvItems, TopRatedItems, UpcomingItems } from '../body-items';
 export default class App extends Component {
    
-    state = {
-        movieService: new MovieService()
-    }
     render() {
         return (
             <main role="main"> 
