@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/movie-db-app/static/css/main.b2d8fd15.chunk.css",
-    "main.js": "/movie-db-app/static/js/main.d473c65b.chunk.js",
-    "main.js.map": "/movie-db-app/static/js/main.d473c65b.chunk.js.map",
-    "runtime-main.js": "/movie-db-app/static/js/runtime-main.8338e1ec.js",
-    "runtime-main.js.map": "/movie-db-app/static/js/runtime-main.8338e1ec.js.map",
-    "static/js/2.b7e36f3d.chunk.js": "/movie-db-app/static/js/2.b7e36f3d.chunk.js",
-    "static/js/2.b7e36f3d.chunk.js.map": "/movie-db-app/static/js/2.b7e36f3d.chunk.js.map",
-    "index.html": "/movie-db-app/index.html",
-    "precache-manifest.b24cc795d8b42ea78fc9bcbaad58bcdf.js": "/movie-db-app/precache-manifest.b24cc795d8b42ea78fc9bcbaad58bcdf.js",
-    "service-worker.js": "/movie-db-app/service-worker.js",
-    "static/css/main.b2d8fd15.chunk.css.map": "/movie-db-app/static/css/main.b2d8fd15.chunk.css.map",
-    "static/js/2.b7e36f3d.chunk.js.LICENSE": "/movie-db-app/static/js/2.b7e36f3d.chunk.js.LICENSE",
-    "static/media/sorry-image-not-available.jpg": "/movie-db-app/static/media/sorry-image-not-available.345b7bba.jpg"
+    "main.css": "/movie-db/static/css/main.b2d8fd15.chunk.css",
+    "main.js": "/movie-db/static/js/main.7174fcaf.chunk.js",
+    "main.js.map": "/movie-db/static/js/main.7174fcaf.chunk.js.map",
+    "runtime-main.js": "/movie-db/static/js/runtime-main.e4c95f95.js",
+    "runtime-main.js.map": "/movie-db/static/js/runtime-main.e4c95f95.js.map",
+    "static/js/2.b7e36f3d.chunk.js": "/movie-db/static/js/2.b7e36f3d.chunk.js",
+    "static/js/2.b7e36f3d.chunk.js.map": "/movie-db/static/js/2.b7e36f3d.chunk.js.map",
+    "index.html": "/movie-db/index.html",
+    "precache-manifest.6267dc351b681615fa7d20e4810ebfd5.js": "/movie-db/precache-manifest.6267dc351b681615fa7d20e4810ebfd5.js",
+    "service-worker.js": "/movie-db/service-worker.js",
+    "static/css/main.b2d8fd15.chunk.css.map": "/movie-db/static/css/main.b2d8fd15.chunk.css.map",
+    "static/js/2.b7e36f3d.chunk.js.LICENSE": "/movie-db/static/js/2.b7e36f3d.chunk.js.LICENSE",
+    "static/media/sorry-image-not-available.jpg": "/movie-db/static/media/sorry-image-not-available.345b7bba.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.8338e1ec.js",
+    "static/js/runtime-main.e4c95f95.js",
     "static/js/2.b7e36f3d.chunk.js",
     "static/css/main.b2d8fd15.chunk.css",
-    "static/js/main.d473c65b.chunk.js"
+    "static/js/main.7174fcaf.chunk.js"
   ]
 }
